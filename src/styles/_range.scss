@@ -1,0 +1,51 @@
+:root {
+  --seek-before-width: 0;
+}
+
+/* PROGRESS BAR */
+$bar-background: #535353;
+$seek-before-color: #1db954;
+$seek-before-width: var(--seek-before-width);
+$knobby: #b3b3b3;
+$selected-knobby: #fff;
+
+input[type="range"] {
+  --seek-before-width: 0;
+  appearance: none;
+  background: $bar-background;
+  border-radius: 10px;
+  position: relative;
+  height: 6px;
+  outline: none;
+
+  &::before {
+    content: '';
+    height: 6px;
+    width: $seek-before-width;
+    background-color: $seek-before-color;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    cursor: pointer;
+  }
+
+  &::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    border: none;
+    background-color: $knobby;
+    cursor: pointer;
+    position: relative;
+    z-index: 3;
+    transition: all 0.1s ease-in-out;
+  }
+
+  &:active::-webkit-slider-thumb {
+    transform: scale(1.1);
+    background-color: $selected-knobby;
+  }
+}
