@@ -1,0 +1,79 @@
+$color-bg-primary: #131313;
+$color-bg-secondary: #171717;
+$color-grad-bottom: #132E56;
+$color-grad-top: #00716A;
+$color-green-accent: #00B255;
+$color-text-primary: #FFF;
+$color-text-muted: #AAA;
+$size: 150px;
+
+.card {
+  width: $size;
+  padding: 1rem;
+  background-color: $color-bg-secondary;
+  border-radius: .5rem;
+  cursor: pointer;
+  transition: background .3s ease-in-out;
+
+  &:hover {
+    background-color: #242424;
+
+    & .cover .pb-wrapper {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  .cover {
+    width: $size;
+    height: $size;
+    position: relative;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, .4), 0 8px 18px rgba(0, 0, 0, .2);
+
+    img {
+      height: auto;
+      width: 100%;
+      vertical-align: middle;
+    }
+
+    .pb-wrapper {
+      position: absolute;
+      right: .5rem;
+      bottom: 1rem;
+      opacity: 0;
+      transform: translateY(1rem);
+      transition: all .3s ease-in-out;
+
+      .play-button {
+        width: 40px;
+        height: 40px;
+        color: #FFF;
+        background: $color-green-accent;
+        border: none;
+        border-radius: 50%;
+        font-size: .6rem;
+        box-shadow: 0 8px 8px rgba(0, 0, 0, .3);
+        transition: transform .3s ease-in-out;
+        cursor: pointer;
+
+        &:hover {
+          transform: scale(1.08);
+        }
+      }
+    }
+  }
+
+  .description {
+    .pl-name {
+      font-size: 1rem;
+      margin-bottom: .4rem;
+    }
+
+    .pl-about {
+      font-size: 0.9375rem;
+      color: $color-text-muted;
+      margin-bottom: .2rem;
+    }
+  }
+}
+

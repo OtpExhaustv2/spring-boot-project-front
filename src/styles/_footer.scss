@@ -1,0 +1,247 @@
+$background-footer: #181818;
+$background-icon-non-active: #b3b3b3;
+$background-icon-active: #fff;
+$action-active: #1db954;
+$action-active-hover: #2bff77;
+
+.footer {
+  position: fixed;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  bottom: 0;
+  height: 65px;
+  width: 100%;
+  background-color: $background-footer;
+  padding: 20px;
+  color: #fff;
+  border-top: 1px solid #282828;
+
+  & .footer__left {
+    flex: .3;
+
+    .song {
+      display: flex;
+      margin-left: 15px;
+      align-items: center;
+
+      img {
+        width: 80px;
+        height: 80px;
+        object-fit: contain;
+      }
+
+      .song-details {
+        margin-left: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        align-self: center;
+
+        .song-title {
+          height: 0;
+          font-weight: bold;
+          font-size: 1rem;
+        }
+
+        .song-group {
+          height: 0;
+          color: #d7d7d7;
+          font-size: .7rem;
+        }
+      }
+
+      .favorite {
+        margin-left: 20px;
+        color: $background-icon-non-active;
+        transition: color .2s ease-in-out;
+        cursor: pointer;
+
+        &.active {
+          color: $action-active;
+
+          &:hover {
+            color: $action-active-hover;
+          }
+        }
+
+        &:hover:not(.active) {
+          color: $background-icon-active;
+        }
+      }
+    }
+  }
+
+  & .footer__center {
+    flex: .4;
+    padding: 0 100px;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+
+    & .timer {
+      display: flex;
+      align-content: center;
+      justify-content: center;
+      line-height: 10px;
+
+      .current-time {
+        margin-right: 10px;
+      }
+
+      .duration {
+        margin-left: 10px;
+      }
+
+      .current-time, .duration {
+        font-size: 12px;
+      }
+
+    }
+
+    & .player {
+      margin-bottom: 10px;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+
+      & > * {
+        position: relative;
+      }
+
+      & button {
+        outline: none;
+        background: none;
+        border: none;
+        font-size: 16px;
+        cursor: pointer;
+        transition: transform .2s ease-in-out;
+
+        &.play-pause {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          background-color: #fff;
+          border-radius: 50%;
+          width: 40px;
+          height: 40px;
+          border: none;
+          transition: transform .2s ease-in-out;
+
+          & > i {
+            color: #000;
+          }
+        }
+
+        &:disabled {
+          cursor: not-allowed;
+          background-color: #b3b3b3;
+        }
+
+        &.active i {
+          color: $action-active;
+
+          &::after {
+            content: '';
+            width: 5px;
+            height: 5px;
+            border-radius: 50%;
+            position: absolute;
+            bottom: 10%;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: $action-active;
+            transition: background-color .2s ease-in-out;
+          }
+        }
+
+        & > i {
+          color: grey;
+          transition: color .2s ease-in-out;
+        }
+
+        &:hover {
+          &:not(.active) > i {
+            color: $font-color;
+          }
+
+          &.active > i {
+            color: #26ea6d;
+
+            &::after {
+              background-color: #26ea6d;
+            }
+          }
+        }
+
+        &.play-pause:hover {
+          transform: scale(1.1);
+
+          & > i {
+            color: #000;
+          }
+        }
+      }
+    }
+
+    & input[type="range"] {
+      width: 80%;
+    }
+  }
+
+  .footer__right {
+    flex: .3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+    & button {
+      outline: none;
+      background: none;
+      border: none;
+      font-size: 16px;
+      cursor: pointer;
+      transition: transform .2s ease-in-out;
+      margin-right: 10px;
+
+      & > i {
+        color: $background-icon-non-active;
+        transition: all .2s ease-in-out;
+      }
+
+      &:hover > i {
+        color: $background-icon-active;
+      }
+    }
+
+    .waiting-queue {
+      position: relative;
+
+      &.active {
+        color: $action-active;
+
+        &:hover {
+          color: $action-active-hover;
+
+          &::after {
+            background-color: $action-active-hover;
+          }
+        }
+
+        &::after {
+          content: '';
+          width: 5px;
+          height: 5px;
+          border-radius: 50%;
+          position: absolute;
+          bottom: -10px;
+          left: 50%;
+          transform: translateX(-50%);
+          background-color: $action-active;
+          transition: background-color .2s ease-in-out;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,12 @@
+.body {
+  flex: .8;
+  height: calc(100vh - 135px);
+  color: #fff;
+  overflow-y: auto;
+  background: linear-gradient(to bottom, $background-color-top 0%, $background-color-bottom 70%) no-repeat;
+  padding-bottom: 30px;
+
+  .content {
+    padding-top: 30px;
+  }
+}
