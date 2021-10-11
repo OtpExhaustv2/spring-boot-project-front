@@ -1,5 +1,5 @@
 import React, {MutableRefObject, useEffect, useRef, useState} from 'react';
-import {NavLink, useHistory} from 'react-router-dom';
+import {useHistory} from 'react-router-dom';
 
 const AudioPlayer = () => {
         const history = useHistory();
