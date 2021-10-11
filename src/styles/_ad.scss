@@ -1,0 +1,21 @@
+.advertisement {
+  background-color: #181818;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  width: 80%;
+  z-index: 1;
+  height: 130px;
+  top: calc(100vh - 235px);
+  left: 20.5%;
+  border-top: 1px solid #282828;
+  box-shadow: 0 10px 5px rgba(0, 0, 0, 0.75);
+
+  .ad {
+    object-fit: cover;
+    width: 500px;
+    height: 100px;
+    background-color: #151315;
+  }
+}

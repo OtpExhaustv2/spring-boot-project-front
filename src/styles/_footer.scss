@@ -16,6 +16,7 @@ $action-active-hover: #2bff77;
   padding: 20px;
   color: #fff;
   border-top: 1px solid #282828;
+  z-index: 3;
 
   & .footer__left {
     flex: .3;

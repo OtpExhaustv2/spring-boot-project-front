@@ -12,6 +12,7 @@ $sidebar-link-active: #fff;
   display: flex;
   flex-direction: column;
   box-shadow: 5px 50px 50px rgba(0, 0, 0, 0.75);
+  z-index: 2;
 
   & .sidebar__logo {
     height: 70px;
