@@ -11,8 +11,10 @@ import Sidebar from "./Sidebar/Sidebar";
 import Navbar from "./Navbar";
 import Footer from "./Footer/Footer";
 import Queue from "../pages/Queue";
+import Ad from "../shared/Ad";
 
 const Routes = () => {
+
     return (
         <Router>
             <div>
@@ -27,13 +29,14 @@ const Routes = () => {
                                 <Route path='/search' exact component={Search}/>
                                 <Route path='/library' exact component={Library}/>
                                 <Route path='/create-playlist' exact component={CreatePlaylist}/>
-                                <Route path='/playlist/:id' component={Playlist}/>
+                                <Route path='/playlist/:slug-:id' component={Playlist}/>
                                 <Route path='/liked-titles' exact component={Liked}/>
                                 <Route path='/queue' exact component={Queue}/>
                                 <Redirect to='/'/>
                             </Switch>
                         </div>
                     </div>
+                    <Ad/>
                 </div>
                 <Footer/>
             </div>
