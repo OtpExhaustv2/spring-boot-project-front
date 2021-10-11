@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React, {MouseEventHandler, useEffect, useState} from 'react';
 import {NavLink, useHistory} from 'react-router-dom';
 
 const Navbar = () => {
@@ -14,8 +14,9 @@ const Navbar = () => {
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
 
+
     return (
-        <div className={`navbar ${scroll ? 'revealed' : ''}`}>
+        <div className={`navbar ${scroll && 'revealed'}`}>
             {history.location.search}
             <div className="links">
                 <div className="left">

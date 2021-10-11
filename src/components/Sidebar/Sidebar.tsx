@@ -27,25 +27,9 @@ const Sidebar = () => {
             <strong className="sidebar__title">PLAYLISTS</strong>
             <hr/>
             <div className="playlists">
-                <PlaylistOption title="Hip Hop" path="/playlist/hip-hop"/>
-                <PlaylistOption title="RnB" path="/playlist/rnb"/>
-                <PlaylistOption title="Rock" path="/playlist/rock"/>
-                <PlaylistOption title="Rock" path="/playlist/rock"/>
-                <PlaylistOption title="Rock" path="/playlist/rock"/>
-                <PlaylistOption title="Rock" path="/playlist/rock"/>
-                <PlaylistOption title="Rock" path="/playlist/rock"/>
-                <PlaylistOption title="Rock" path="/playlist/rock"/>
-                <PlaylistOption title="Rock" path="/playlist/rock"/>
-                <PlaylistOption title="Rock" path="/playlist/rock"/>
-                <PlaylistOption title="Rock" path="/playlist/rock"/>
-                <PlaylistOption title="Rock" path="/playlist/rock"/>
-                <PlaylistOption title="Rock" path="/playlist/rock"/>
-                <PlaylistOption title="Rock" path="/playlist/rock"/>
-                <PlaylistOption title="Rock" path="/playlist/rock"/>
-                <PlaylistOption title="Rock" path="/playlist/rock"/>
-                <PlaylistOption title="Rock" path="/playlist/rock"/>
-                <PlaylistOption title="Rock" path="/playlist/rock"/>
-                <PlaylistOption title="Rock" path="/playlist/rock"/>
+                <PlaylistOption title="Hip Hop" path="/playlist/hip_hop-1"/>
+                <PlaylistOption title="RnB" path="/playlist/rnb-2"/>
+                <PlaylistOption title="Rock" path="/playlist/rock-3"/>
             </div>
         </aside>
     );
